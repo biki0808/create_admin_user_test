@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css_file/css_for_multiple_pages.css" />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width:450px)"
+      href="css_file/phone.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="admin_container">
+      <div id="admin_child">
+        <!-- {% extends 'base.html' %} -->
+        <!-- {% block content %} -->
+        <h2>Create Admin User</h2>
+        <!-- {% if messages %} -->
+        <!-- {% for message in messages %} -->
+        <div class="alert alert-{{ message.tags }}">
+          <!-- {{ message }} -->
+        </div>
+        <!-- {% endfor %} -->
+        <!-- {% endif %} -->
+        <form method="post">
+          <!-- {% csrf_token %} -->
+          <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" name="username" class="form-control" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" name="email" class="form-control" required />
+          </div>
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input
+              type="password"
+              name="password"
+              class="form-control"
+              required
+            />
+          </div>
+          <div id="div_button">
+            <button type="submit" class="btn btn-primary">Create User</button>
+          </div>
+        </form>
+        <!-- {% endblock %} -->
+      </div>
+    </div>
+  </body>
+</html>
